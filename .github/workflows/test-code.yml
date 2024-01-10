@@ -1,7 +1,7 @@
 name: Test Algorithms
 on: [push]
 jobs:
-  build:
+  test-algos:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
