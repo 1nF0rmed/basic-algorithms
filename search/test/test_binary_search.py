@@ -1,4 +1,5 @@
 import pytest
+import random
 from search.binary_search import BinarySearch
 
 @pytest.fixture
@@ -10,3 +11,10 @@ def test_binary_search(binary_search):
     item = 3
     result = binary_search.search(list, item)
     assert result == 2
+
+def test_binary_long_array_search(binary_search):
+    list = [i for i in range(1, 10000001)]
+    item_index = random.randint(0, 9999999)
+    item = list[item_index]
+    result = binary_search.search(list, item)
+    assert result == item_index
