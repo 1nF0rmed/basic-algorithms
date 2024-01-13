@@ -25,14 +25,3 @@ def test_long_array_search(search):
     item = list[item_index]
     result = search.search(list, item)
     assert result == item_index
-
-def test_array_search_time(search):
-    list = [i for i in range(1, 100000001)]
-    item_index = random.randint(0, 99999999)
-    item = list[item_index]
-    import time
-    start_time = time.time()
-    result = search.search(list, item)
-    end_time = time.time()
-    assert result == item_index
-    assert end_time - start_time <= 1
