@@ -29,3 +29,9 @@ def test_binary_array_search_time(binary_search):
     end_time = time.time()
     assert result == item_index
     assert end_time - start_time < 0.5
+
+def test_binary_string_search(binary_search):
+    list = ['apple', 'banana', 'cherry', 'date', 'elderberry']
+    item = 'cherry'
+    result = binary_search.search(list, item)
+    assert result == 2
